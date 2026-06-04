@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila Premium: Alusões Históricas ENEM | UPT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            blue: '#2563eb',
+                            neon: '#06b6d4',
+                            purple: '#8b5cf6',
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f1f5f9; }
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #8b5cf6);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #8b5cf6;
+        }
+        
+        /* Estilos específicos para impressão (PDF) */
+        @media print {
+            body { background: white !important; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+            .card-hover { box-shadow: none !important; border: 1px solid #e2e8f0 !important; break-inside: avoid; }
+            .glass { background: white !important; }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 antialiased">
+
+    <!-- CAPA/HERO SECTION -->
+    <header class="relative min-h-[90vh] flex flex-col justify-center items-center px-6 overflow-hidden bg-brand-dark">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1548625361-ec853f09dc1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                 alt="[Imagem de ruínas históricas sob um céu dramático]" 
+                 class="w-full h-full object-cover opacity-30 mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center">
+            <!-- Logos -->
+            <div class="flex gap-4 mb-12">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full text-white font-display font-bold tracking-widest text-sm">
+                    <i class="fas fa-university mr-2 text-brand-neon"></i> UNIVERSIDADE PARA TODOS
+                </div>
+                <div class="bg-brand-blue px-6 py-2 rounded-full text-white font-display font-bold text-sm shadow-[0_0_15px_rgba(37,99,235,0.5)]">
+                    MÓDULO REDAÇÃO
+                </div>
+            </div>
+
+            <!-- Título Principal -->
+            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-brand-purple/20 border border-brand-purple/50 text-brand-neon font-bold text-sm tracking-widest uppercase">
+                🎯 Repertório Sociocultural Coringa
+            </div>
+            
+            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-6 tracking-tight drop-shadow-2xl">
+                ALUSÕES <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon via-blue-400 to-brand-purple">HISTÓRICAS</span>
+            </h1>
+            
+            <p class="text-lg md:text-2xl text-slate-300 font-light max-w-3xl mb-12 leading-relaxed">
+                Aprenda a hackear a <strong class="text-white">Competência II e III</strong> do ENEM usando Grécia, Roma e Idade Média como repertório produtivo.
+            </p>
+
+            <!-- Ícones Decorativos -->
+            <div class="flex gap-8 text-slate-400">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 text-brand-neon text-2xl shadow-lg backdrop-blur">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider">Grécia</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 text-brand-blue text-2xl shadow-lg backdrop-blur">
+                        <i class="fas fa-columns"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider">Roma</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 text-brand-purple text-2xl shadow-lg backdrop-blur">
+                        <i class="fab fa-fort-awesome"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider">Medievo</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- GUIA DE USO (Estilo "Cheatsheet") -->
+    <section class="py-16 px-6 max-w-5xl mx-auto -mt-10 relative z-20">
+        <div class="glass rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row gap-8 items-center border-t-4 border-t-brand-neon">
+            <div class="md:w-1/3 text-center md:text-left">
+                <h2 class="font-display text-3xl font-bold text-brand-dark mb-4">Como "hackear" a Redação?</h2>
+                <p class="text-slate-600 mb-6">A História não é decoreba. Ela serve para provar que o problema do tema do ENEM tem <strong>raízes estruturais</strong>.</p>
+                <div class="inline-flex items-center gap-2 text-brand-purple font-bold">
+                    <i class="fas fa-bolt"></i> Dica de Ouro
+                </div>
+            </div>
+            <div class="md:w-2/3 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                <ul class="space-y-4">
+                    <li class="flex gap-4">
+                        <div class="bg-brand-neon text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+                        <p class="text-slate-700"><strong>Não jogue a citação solta:</strong> Apresente o fato histórico e, logo em seguida, use conectivos como <em>"De maneira análoga..."</em> ou <em>"Fora do contexto histórico..."</em> para ligar ao tema.</p>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="bg-brand-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+                        <p class="text-slate-700"><strong>Adapte a frase-modelo:</strong> As frases coloridas desta apostila são moldes. Encaixe o tema da sua redação nelas!</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 1: GRÉCIA ANTIGA -->
+    <section class="py-20 px-6 max-w-6xl mx-auto page-break">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row gap-10 items-center mb-16">
+            <div class="w-full md:w-1/2">
+                <div class="inline-block px-4 py-1 rounded-full bg-brand-neon/10 text-brand-neon font-bold text-sm mb-4">EIXO 01</div>
+                <h2 class="font-display text-5xl font-black text-brand-dark mb-6">Grécia Antiga</h2>
+                <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-brand-neon pl-6">
+                    O berço da democracia, do pensamento crítico, mas também uma sociedade marcada por forte exclusão social, patriarcado e radicalismo militar em algumas cidades-estado.
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/The_Parthenon_in_Athens.jpg" 
+                     alt="[Imagem do Partenon na Grécia]" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent flex items-end p-6">
+                    <span class="text-white font-bold tracking-widest"><i class="fas fa-map-marker-alt text-brand-neon mr-2"></i>Atenas, Berço do Ocidente</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Card 1 -->
+            <article class="bg-white rounded-3xl p-8 border border-slate-200 card-hover relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-brand-neon/5 rounded-full -mr-10 -mt-10 blur-2xl"></div>
+                
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-brand-neon/10 text-brand-neon p-3 rounded-xl"><i class="fas fa-brain text-xl"></i></div>
+                    <h3 class="font-display text-2xl font-bold">1. A Paideia Grega</h3>
+                </div>
+                <p class="text-slate-600 mb-6 leading-relaxed">Em Atenas, a <em>paideia</em> era o modelo de educação integral. Não bastava saber ler; o jovem era educado para a <strong>cidadania ativa</strong>, para pensar criticamente e participar da política da <em>Pólis</em>.</p>
+                
+                <div class="mb-6 flex flex-wrap gap-2">
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Educação</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Cidadania</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Evasão Escolar</span>
+                </div>
+
+                <div class="bg-brand-dark text-white p-6 rounded-2xl relative">
+                    <i class="fas fa-quote-left absolute top-4 right-4 text-white/10 text-4xl"></i>
+                    <p class="font-serif italic text-[15px] leading-relaxed">
+                        "Enquanto a 'paideia' grega buscava a formação integral do cidadão, no Brasil contemporâneo, a educação muitas vezes falha nesse papel devido a [inserir problema: ex: falta de investimentos], o que impede a construção de uma sociedade criticamente ativa."
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="bg-white rounded-3xl p-8 border border-slate-200 card-hover relative overflow-hidden">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-red-500/10 text-red-500 p-3 rounded-xl"><i class="fas fa-shield-alt text-xl"></i></div>
+                    <h3 class="font-display text-2xl font-bold">2. Esparta e a Militarização</h3>
+                </div>
+                <p class="text-slate-600 mb-6 leading-relaxed">Diferente de Atenas, Esparta focava no militarismo (o <em>agoge</em>). O indivíduo pertencia ao Estado e a violência/disciplina rígida eram os pilares da sociedade, anulando a individualidade.</p>
+                
+                <div class="mb-6 flex flex-wrap gap-2">
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Violência Policial</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Autoritarismo</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Saúde Mental</span>
+                </div>
+
+                <div class="bg-red-50 border border-red-100 p-6 rounded-2xl relative">
+                    <p class="font-serif italic text-[15px] text-red-900 leading-relaxed">
+                        "Historicamente, a cidade de Esparta anulava a individualidade em prol da militarização extrema. Analogamente, nota-se na sociedade atual um culto à disciplina violenta e ao autoritarismo que ameaça [inserir direito/saúde]."
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="bg-white rounded-3xl p-8 border border-slate-200 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-brand-blue/10 text-brand-blue p-3 rounded-xl"><i class="fas fa-users-slash text-xl"></i></div>
+                    <h3 class="font-display text-2xl font-bold">3. Contradições Democráticas</h3>
+                </div>
+                <p class="text-slate-600 mb-6 leading-relaxed">A democracia ateniense era linda na teoria, mas na prática era elitista. Mulheres, estrangeiros (metecos) e escravos eram <strong>excluídos</strong>. Ou seja, os direitos eram para poucos.</p>
+                
+                <div class="mb-6 flex flex-wrap gap-2">
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Exclusão Social</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Falsa Representatividade</span>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl">
+                    <p class="font-serif italic text-[15px] text-blue-900 leading-relaxed">
+                        "Assim como a democracia ateniense excluía minorias da vida política, o cenário atual evidencia uma cidadania ilusória, na qual a garantia de direitos falha ao não alcançar [inserir grupo marginalizado]."
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 4 (NEW - OSTRACISMO) -->
+            <article class="bg-white rounded-3xl p-8 border border-slate-200 card-hover">
+                <div class="absolute top-0 right-0 bg-brand-purple text-white text-xs font-bold px-4 py-1 rounded-bl-xl">Tema em Alta 🔥</div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-brand-purple/10 text-brand-purple p-3 rounded-xl"><i class="fas fa-user-times text-xl"></i></div>
+                    <h3 class="font-display text-2xl font-bold">4. O Ostracismo</h3>
+                </div>
+                <p class="text-slate-600 mb-6 leading-relaxed">Em Atenas, o ostracismo era o banimento de 10 anos de um cidadão considerado uma ameaça. Hoje, estudiosos o consideram o <strong>primeiro "cancelamento"</strong> da história.</p>
+                
+                <div class="mb-6 flex flex-wrap gap-2">
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Cultura do Cancelamento</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Tribunais da Internet</span>
+                </div>
+
+                <div class="bg-purple-50 border border-purple-100 p-6 rounded-2xl">
+                    <p class="font-serif italic text-[15px] text-purple-900 leading-relaxed">
+                        "Na Grécia Antiga, o ostracismo funcionava como um banimento social. Na era digital, essa prática foi reinventada através da 'cultura do cancelamento', que promove exclusão e linchamentos virtuais sem direito de defesa."
+                    </p>
+                </div>
+            </article>
+            
+            <!-- Card 5 (Violência de Gênero) -->
+            <article class="bg-white rounded-3xl p-8 border border-slate-200 card-hover md:col-span-2">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-pink-500/10 text-pink-500 p-3 rounded-xl"><i class="fas fa-venus text-xl"></i></div>
+                            <h3 class="font-display text-2xl font-bold">5. O Mito de Medusa</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6 leading-relaxed text-justify">Segundo a mitologia, Medusa sofreu violência sexual no templo de Atena e, em vez de acolhida, foi punida pela deusa e transformada em monstro. Essa é uma metáfora poderosa para a <strong>culpabilização da vítima</strong> na nossa sociedade estruturalmente machista.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Feminicídio</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Violência de Gênero</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Cultura do Estupro</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="bg-pink-50 border border-pink-100 p-6 rounded-2xl h-full flex items-center">
+                            <p class="font-serif italic text-[15px] text-pink-900 leading-relaxed">
+                                "A trajetória de Medusa revela uma inversão perversa de responsabilidades, onde a vítima de violência acaba sendo penalizada. Essa dinâmica nociva continua a alimentar práticas discriminatórias e estigmatizar mulheres em pleno século XXI."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: ROMA ANTIGA -->
+    <section class="py-20 px-6 max-w-6xl mx-auto page-break bg-white border-t border-slate-200">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row-reverse gap-10 items-center mb-16">
+            <div class="w-full md:w-1/2">
+                <div class="inline-block px-4 py-1 rounded-full bg-brand-blue/10 text-brand-blue font-bold text-sm mb-4">EIXO 02</div>
+                <h2 class="font-display text-5xl font-black text-brand-dark mb-6">Roma Antiga</h2>
+                <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-brand-blue pl-6">
+                    A civilização da expansão, das leis e do espetáculo. Roma ensina sobre alienação em massa, falhas nas fronteiras e a construção jurídica do ocidente.
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                     alt="[Imagem do Coliseu Romano]" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent flex items-end p-6">
+                    <span class="text-white font-bold tracking-widest"><i class="fas fa-map-marker-alt text-brand-blue mr-2"></i>O Império do Pão e Circo</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Card 1 -->
+            <article class="bg-slate-50 rounded-3xl p-8 border border-slate-200 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-brand-blue/10 text-brand-blue p-3 rounded-xl"><i class="fas fa-theater-masks text-xl"></i></div>
+                    <h3 class="font-display text-2xl font-bold">1. Pão e Circo & Gladiadores</h3>
+                </div>
+                <p class="text-slate-600 mb-6 leading-relaxed">Para abafar revoltas e mascarar a pobreza, o Estado romano distribuía trigo e oferecia batalhas violentas de gladiadores (muitos escravizados) no Coliseu. O espetáculo e a barbárie viravam alienação.</p>
+                
+                <div class="mb-6 flex flex-wrap gap-2">
+                    <span class="bg-white border text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Manipulação Mediática</span>
+                    <span class="bg-white border text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Alienação</span>
+                    <span class="bg-white border text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Espetacularização da Dor</span>
+                </div>
+
+                <div class="bg-white shadow-sm p-6 rounded-2xl border border-slate-100">
+                    <p class="font-serif italic text-[15px] text-slate-700 leading-relaxed">
+                        "Tal como na política do 'Pão e Circo', a espetacularização e o entretenimento fútil são utilizados na atualidade para anestesiar a população e desviá-la do debate acerca dos graves problemas estruturais que afligem a sociedade."
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="bg-slate-50 rounded-3xl p-8 border border-slate-200 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-orange-500/10 text-orange-500 p-3 rounded-xl"><i class="fas fa-globe-europe text-xl"></i></div>
+                    <h3 class="font-display text-2xl font-bold">2. Queda e Fronteiras</h3>
+                </div>
+                <p class="text-slate-600 mb-6 leading-relaxed">O Império Romano ruiu, em parte, pela ineficácia em lidar com a imigração (invasões bárbaras) e pela corrupção interna. Fecharam fronteiras, mas não integraram os povos vizinhos, gerando colapso.</p>
+                
+                <div class="mb-6 flex flex-wrap gap-2">
+                    <span class="bg-white border text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Crise Migratória</span>
+                    <span class="bg-white border text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Xenofobia</span>
+                    <span class="bg-white border text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Corrupção</span>
+                </div>
+
+                <div class="bg-white shadow-sm p-6 rounded-2xl border border-slate-100">
+                    <p class="font-serif italic text-[15px] text-slate-700 leading-relaxed">
+                        "O colapso das fronteiras romanas na antiguidade encontra paralelos nas crises imigratórias contemporâneas, nas quais a xenofobia e a falta de políticas de acolhimento geram tensões severas."
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="bg-slate-50 rounded-3xl p-8 border border-slate-200 card-hover md:col-span-2">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-green-500/10 text-green-500 p-3 rounded-xl"><i class="fas fa-balance-scale text-xl"></i></div>
+                            <h3 class="font-display text-2xl font-bold">3. O Direito Romano</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6 leading-relaxed text-justify">Base do ocidente, criou o conceito de leis escritas aplicáveis aos cidadãos. Mas alerta: apenas a elite (patrícios) tinha amplas garantias. A lei existia, mas sua aplicação era altamente desigual e favorecia os poderosos.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white border text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Acesso à Justiça</span>
+                            <span class="bg-white border text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Desigualdade Penal</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="bg-brand-dark text-white p-6 rounded-2xl h-full flex items-center relative">
+                            <i class="fas fa-quote-right absolute bottom-4 right-4 text-white/10 text-4xl"></i>
+                            <p class="font-serif italic text-[15px] leading-relaxed">
+                                "O legado do Direito Romano prova que normas jurídicas são insuficientes se não houver isonomia. Analogamente, o sistema judiciário brasileiro frequentemente falha ao assegurar os direitos previstos em lei, beneficiando apenas camadas privilegiadas."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: MUNDO MEDIEVAL -->
+    <section class="py-20 px-6 max-w-6xl mx-auto page-break bg-brand-dark text-slate-200 rounded-[3rem] my-10 relative overflow-hidden">
+        
+        <!-- Fundo decorativo -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <i class="fab fa-fort-awesome absolute top-10 left-10 text-[15rem]"></i>
+            <i class="fas fa-church absolute bottom-10 right-10 text-[15rem]"></i>
+        </div>
+
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row gap-10 items-center mb-16 relative z-10">
+            <div class="w-full md:w-1/2">
+                <div class="inline-block px-4 py-1 rounded-full bg-brand-purple/20 border border-brand-purple text-brand-purple font-bold text-sm mb-4">EIXO 03</div>
+                <h2 class="font-display text-5xl font-black text-white mb-6">Mundo Medieval</h2>
+                <p class="text-lg text-slate-400 leading-relaxed border-l-4 border-brand-purple pl-6">
+                    A era da fé cega, da fragmentação do poder e das pragas. Fundamental para discutir temas de saúde pública, negacionismo religioso, violência contra a mulher e exploração de terras.
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                <img src="https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                     alt="[Imagem de Castelo Medieval na Europa]" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-6">
+                    <span class="text-white font-bold tracking-widest"><i class="fas fa-map-marker-alt text-brand-purple mr-2"></i>A Era dos Feudos</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 relative z-10">
+            <!-- Card 1 -->
+            <article class="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-brand-purple/20 text-brand-purple p-3 rounded-xl"><i class="fas fa-cross text-xl"></i></div>
+                    <h3 class="font-display text-2xl font-bold text-white">1. As Cruzadas e a Intolerância</h3>
+                </div>
+                <p class="text-slate-400 mb-6 leading-relaxed">As expedições militares financiadas pela Igreja para retomar a Terra Santa provocaram massacres motivados por fervor religioso contra islâmicos. O choque de civilizações pautado no ódio.</p>
+                
+                <div class="mb-6 flex flex-wrap gap-2">
+                    <span class="bg-white/10 text-slate-300 text-xs font-bold px-3 py-1 rounded-md">Intolerância Religiosa</span>
+                    <span class="bg-white/10 text-slate-300 text-xs font-bold px-3 py-1 rounded-md">Xenofobia</span>
+                </div>
+
+                <div class="bg-brand-purple/20 border border-brand-purple/30 p-6 rounded-2xl">
+                    <p class="font-serif italic text-[15px] text-purple-200 leading-relaxed">
+                        "Os massacres motivados pelas Cruzadas medievais escancaram os perigos da intolerância religiosa. Esse fanatismo encontra eco no presente, onde ataques a religiões [ex: de matriz africana] violam o Estado laico e a convivência pacífica."
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 card-hover">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-red-500/20 text-red-400 p-3 rounded-xl"><i class="fas fa-fire text-xl"></i></div>
+                    <h3 class="font-display text-2xl font-bold text-white">2. Inquisição e Caça às Bruxas</h3>
+                </div>
+                <p class="text-slate-400 mb-6 leading-relaxed">Mulheres independentes, curandeiras ou que desafiavam o padrão patriarcal eram acusadas de bruxaria e mortas pela Inquisição (fenômeno que estourou no final do Medievo/Modernidade).</p>
+                
+                <div class="mb-6 flex flex-wrap gap-2">
+                    <span class="bg-white/10 text-slate-300 text-xs font-bold px-3 py-1 rounded-md">Feminicídio Histórico</span>
+                    <span class="bg-white/10 text-slate-300 text-xs font-bold px-3 py-1 rounded-md">Silenciamento Feminino</span>
+                </div>
+
+                <div class="bg-red-900/20 border border-red-500/30 p-6 rounded-2xl">
+                    <p class="font-serif italic text-[15px] text-red-200 leading-relaxed">
+                        "A 'caça às bruxas' funcionou como um controle institucional sobre os corpos femininos. Essa estrutura patriarcal resiste até hoje, manifestando-se nos assustadores índices de feminicídio e opressão de gênero no Brasil."
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 card-hover md:col-span-2">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-teal-500/20 text-teal-400 p-3 rounded-xl"><i class="fas fa-biohazard text-xl"></i></div>
+                            <h3 class="font-display text-2xl font-bold text-white">3. Peste Negra e Negacionismo</h3>
+                        </div>
+                        <p class="text-slate-400 mb-6 leading-relaxed text-justify">Uma pandemia que dizimou a Europa devido à péssima infraestrutura sanitária. O pânico gerou desinformação e teorias da conspiração (ex: culpando minorias) em detrimento da ciência e da razão.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white/10 text-slate-300 text-xs font-bold px-3 py-1 rounded-md">Negacionismo Científico</span>
+                            <span class="bg-white/10 text-slate-300 text-xs font-bold px-3 py-1 rounded-md">Crise Sanitária / Saneamento</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="bg-teal-900/20 border border-teal-500/30 p-6 rounded-2xl h-full flex items-center">
+                            <p class="font-serif italic text-[15px] text-teal-200 leading-relaxed">
+                                "Assim como na Peste Negra medieval, a falta de acesso ao saneamento básico e as correntes de desinformação ainda hoje ameaçam a saúde pública, revelando a perigosa persistência do negacionismo científico."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <footer class="py-12 px-6 text-center border-t border-slate-200 mt-10">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-display text-2xl font-bold text-brand-dark mb-4">Pronto para tirar 1000 na Redação? 🚀</h2>
+            <p class="text-slate-500 mb-6">Use essas estruturas históricas de forma orgânica. Lembre-se: o avaliador quer ver você conectar o passado ao problema do presente (Competência 3).</p>
+            <div class="text-sm font-bold text-brand-blue tracking-widest uppercase">
+                #ProjetoAprovaçãoUPT
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
